@@ -1,0 +1,12 @@
+<div class="row hoverable">
+  <a [routerLink]="['/product', product['_id']]">
+  <div class="image-wrapper col s2 m3">
+    <a [routerLink]="['/product', product['_id']]"><img src="{{product.images}}" class="responsive-img"></a>
+  </div>
+  <div class="col s7">
+    <a [routerLink]="['/product', product['_id']]"><span  class="product-title" >{{product.name}}</span></a><br>
+    <span class="price">${{product.price}}</span>
+    <p>{{product.description}}</p>
+  </div>
+</a>
+</div>

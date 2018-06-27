@@ -1,0 +1,11 @@
+.disabled {
+    pointer-events: none;
+}
+select{
+    display: inline;
+}
+
+.options{
+    margin:20px 0px 10px 0px;
+    width:100%;
+}

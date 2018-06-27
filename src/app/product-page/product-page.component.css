@@ -1,0 +1,23 @@
+.mainbody{
+    margin-top:30px;
+}
+
+.breadcrumb:before {
+    color: black;
+}
+.breadcrumb, .breadcrumb:last-child {
+   color:rgb(0, 0, 0);
+ }
+
+ .breadcrumbnav{
+     margin-bottom: 40px;
+ }
+
+.nav-wrapper{
+    padding-left: 20px;
+}
+
+#mainpicture{
+    height:400px;
+    width: 500px;
+}

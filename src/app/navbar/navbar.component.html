@@ -1,0 +1,29 @@
+<nav class="blue ">
+  <div class="nav-wrapper container">
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <a [routerLink]="['/product']" class="brand-logo white-text"><i class="material-icons">shopping_basket</i></a>
+    <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> -->
+    <ul class="right">
+      <!-- <li><a data-target="modal1" class="modal-trigger"><span>Search</span></a></li> -->
+      <li routerLinkActive="active"><a [routerLink]="['/cart']"><span>Cart:</span><span>{{item}}</span></a></li>
+      
+    </ul>
+    <ul class="right hide-on-small-and-down ">
+        <!-- <li><app-search></app-search></li>     -->
+        <li><a data-target="modal1" class="modal-trigger"><span>Search</span></a></li>
+    </ul>
+    <app-search [trigger]="false"></app-search>
+
+    <ul id="slide-out" class="sidenav">
+        <li><a (click)="changeRoute('/')">Home</a></li>
+        <li><a (click)="changeRoute('/product')">Product</a></li>
+        <li><a (click)="changeRoute('/search')">Search</a></li>
+        <li><a (click)="changeRoute('/orderstatus')">Order Status</a></li>
+        <li><a (click)="changeRoute('/cart')">Cart</a></li>  
+    </ul>
+
+</div>
+  
+</nav>
+
+      

@@ -1,0 +1,23 @@
+
+  @media only screen and (min-width: 601px) {
+    .container {
+      width: 85%;
+    }
+  }
+  @media only screen and (min-width: 993px) {
+    .container {
+      width: 70%;
+    }
+  }
+
+  .product-image{
+    width: 180px;
+    height: 130px;
+}
+
+#mainbody{
+  margin: 0 auto;
+  max-width: 980px;
+  width: 90%;
+  margin-bottom:150px;
+}
