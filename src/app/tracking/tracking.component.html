@@ -1,0 +1,53 @@
+<div class="container" id="maincontainer">
+  <div class="row">
+    <h3>Enter your order number</h3>
+      <form #trackForm ="ngForm" (ngSubmit)="open(trackForm.value.orderNum)">
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="icon_prefix" type="number" name="orderNum" class="validate" autocomplete="off"  ngModel>
+            <label for="icon_prefix">Order Number</label>
+            <button class="btn waves-effect right" type="submit">Submit
+                <i class="material-icons right">send</i>
+              </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div *ngIf="result">
+      <table class="striped highlight">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of cart.shoppingCart">
+            <td><a [routerLink]="['/product',item._id]">{{item.name}}</a></td>
+            <td>{{item.count}}</td>  
+          </tr>
+          </tbody>
+      </table>
+
+      <div class="row">
+        <table class="col s6 m4 l4 right">
+            <tbody>
+              <td class="flow-text">Total Item:</td>
+              <td class="flow-text">{{cart.totalItem}}</td>
+            </tbody>
+            <tbody>
+              <td class="flow-text">Total Price:</td>
+              <td class="flow-text">${{cart.totalPrice}}</td>
+            </tbody>
+          </table>
+      </div>
+    </div>
+    <div *ngIf="notfound">
+        <h1>Status Not Available</h1>
+        <p>Order Number:{{ordernum}}</p>
+        <p>The order number may be incorrect or the status update is not yet available. Please verify your order number and try again later.</p>
+      </div>
+</div>
+

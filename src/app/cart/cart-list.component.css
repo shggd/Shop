@@ -1,0 +1,17 @@
+
+
+.cart-item{ 
+     padding: 20px 0;
+ }
+
+ .image-wrapper{
+    margin-right: 20px;
+ }
+
+ select{
+    display: inline;
+}
+.product-image{
+    width: 180px;
+    height: 130px;
+}

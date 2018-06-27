@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+.price{
+    color:#ff9a00;
+    font-size:22.4px;
+    font-weight: 700;
+}
+
+
+.product-title{
+    color:black;
+    font-size:  1em;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.listwrapper{
+    padding-bottom:10px;
+    margin-right:5px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+
+#maincontainer{
+    margin: 0 auto;
+    max-width: 980px;
+    width: 90%;
+    margin-bottom:150px;
+    margin-top:50px;
+}

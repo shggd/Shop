@@ -1,0 +1,51 @@
+<!-- <div class="input-field  white-text">
+    <i class="black-text material-icons prefix" (click)="check()">search</i>
+    <input type="text" placeholder="Search" id="autocomplete-input" class="autocomplete black-text" >
+    <input type="submit" style="display: none" />    
+</div> -->
+<!-- 
+<form #searchForm = "ngForm" (ngSubmit)="check(searchForm)">
+  <div class="input-field  white-text">
+      <i class="black-text material-icons prefix icon" (click)="check(searchForm)">search</i>
+      <input type="text" placeholder="Search" name="search" class="autocomplete black-text" ngModel>
+      
+  </div>
+</form> -->
+
+
+<form #searchForm = "ngForm"  class="col s12" *ngIf="trigger" (ngSubmit)="check(searchForm)">
+  <div class="row" style="margin-top:50px">
+    <div class="input-field col s7">
+      <i class="material-icons prefix responsive-img">search</i>
+      <input id="icon_prefix1" type="text" name="search" autocomplete="off" class="validate black-text"  ngModel>
+      <label for="icon_prefix1">Item Name</label>
+    </div>  
+      
+      <div class="input-field col s5">
+        <button class="btn" type="submit" >Submit
+            <i class="material-icons right">send</i>
+        </button>
+    </div>  
+  </div>
+</form>
+
+<form #modalForm = "ngForm" (ngSubmit)="check(modalForm)">
+<div id="modal1" class="modal">
+    <div class="modal-content">
+      <h1 class="black-text">Search for products</h1>
+      <nav class="white">
+          <div class="nav-wrapper">
+              <div class="input-field">
+                <input id="search" type="search" name="search" autocomplete="off" required ngModel> 
+                <label class="label-icon" for="search"><i class="material-icons black-text">search</i></label>
+                <i class="material-icons">close</i>
+              </div>   
+          </div>
+        </nav>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="modal-close waves-effect waves-green btn-flat">Search</button>
+        <a class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+    </div>
+  </div>
+</form>

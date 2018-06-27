@@ -1,0 +1,19 @@
+<div class="cart-item">
+  <div class="row">
+    <div class="image-wrapper col s2 m3 hide-on-small-only">
+      <img src="{{cartItem.product.images}}" class="responsive-img product-image">
+    </div>
+    <div class="col s4">
+      <a [routerLink]="['/product',cartItem.product['_id']]">{{cartItem.product.name}}</a><br>
+      <span class="price">${{cartItem.product.price}}</span><br>
+      <app-remove-item [product] = cartItem.product></app-remove-item>
+    </div>
+
+    <div class= "col s3">
+      <select (change)="change($event.target.value)" style="margin-bottom:10px">
+        <option *ngFor="let val of numbers" [selected]="val===cartItem.count" value="{{val}}">{{val}}</option>
+      </select><br>
+      Total: <span class="price">${{subtotal}}</span>
+    </div>
+  </div>
+</div>

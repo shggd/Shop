@@ -1,0 +1,26 @@
+<nav class="blue">
+    <div class="nav-wrapper container">
+      <a href="#" [routerLink]="['/product']" class="brand-logo center white-text"><i class="material-icons">shopping_cart</i></a> 
+      <ul class="left">
+            <li><a [routerLink]="['/checkout']"><i class="material-icons left">arrow_back</i>Back to Checkout</a></li>          
+      </ul>
+      <ul class="right">
+            <li><i class="material-icons right">phone</i>646-132-2222</li>    
+      </ul>
+    </div>
+</nav>
+
+
+<div class="container" id="mainbody">
+    <h2 class="center">Review Order</h2>
+    <div class="row">
+      <div class="col s12 z-depth-1 listwrapper">
+        <app-cart-list *ngFor="let item of cart?.shoppingCart" [cartItem] = item></app-cart-list>
+      </div>
+    </div>
+    <div class="center">
+      <h4>ITEM({{cart.getTotalItem()}})</h4>
+      <h4>TOTAL ${{cart.getTotalPrice()}}</h4>
+      <button class="btn" (click)="Placeorder()">Place Order</button>
+    </div>    
+</div>

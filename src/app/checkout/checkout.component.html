@@ -1,0 +1,40 @@
+<nav class="blue">
+    <div class="nav-wrapper container">
+      <a href="#" [routerLink]="['/product']" class="brand-logo center white-text"><i class="material-icons">shopping_cart</i></a> 
+      <ul class="left">
+            <li><a [routerLink]="['/cart']"><i class="material-icons left">arrow_back</i>Back to Cart</a></li>          
+      </ul>
+      <ul class="right">
+            <li><i class="material-icons right">phone</i>646-132-2222</li>    
+      </ul>
+    </div>
+</nav>
+        
+<div id="main-container" class="container">
+    <h2 class="center">CheckOut</h2>
+    <div class="row">
+        <div class="col l2"></div>
+        <div class="col l4 s12">
+            <h2>Guest CheckOut</h2>
+            <p>You can check out without creating an account. You'll have a chance to create an account later</p>
+            <a [routerLink]="['/review-order']"><button class="btn">Checkout</button></a>
+            <h2>User Signup</h2>
+            <p>Quickly set up an account</p>
+            <a><button class="btn">Create account</button></a>
+        </div>
+        <div class="col l4 s12">
+            <h2>User CheckOut</h2>
+            <p>Welcome back. Please enter your information below.</p>
+            <div class="input-field">
+                    <input id="Username" type="email">
+                    <label for="Username">Username</label>
+                  </div>
+            <div class="input-field">
+                <input id="password" type="password" class="validate">
+                <label for="password">Password</label>
+                </div>
+            <button class="btn">Sign in</button>
+        </div>
+
+    </div>
+</div>

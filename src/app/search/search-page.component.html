@@ -1,0 +1,12 @@
+<div class="container">
+  <app-search [trigger]="true"></app-search>
+  <h4 [hidden]="keyword">Search for products on our site</h4>
+  <div *ngIf="keyword">
+    <h4 *ngIf="products.length==0">Your search for "{{keyword}}" did not yield any results.</h4>
+    <h4 *ngIf="products.length>0">{{products.length}} result for "{{keyword}}"</h4>
+
+    <app-search-result *ngFor="let product of products" [product]=product></app-search-result>
+
+  </div>  
+
+</div>

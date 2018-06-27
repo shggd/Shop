@@ -1,0 +1,12 @@
+/* .carousel { 
+    min-height: 600px;
+    } */
+
+
+#maincontainer{
+    margin: 0 auto;
+    max-width: 780px;
+    width: 90%;
+    margin-bottom:150px;
+    margin-top:50px;
+}
