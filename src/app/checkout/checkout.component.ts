@@ -1,6 +1,4 @@
-import { NavbarService } from './../services/navbar.service';
-import { Component, OnInit } from '@angular/core';
-import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
+import { Component, OnInit,OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-checkout',
@@ -9,9 +7,8 @@ import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
 })
 export class CheckoutComponent implements OnInit,OnDestroy {
 
-  constructor(private navService:NavbarService) {
+  constructor() {
     window.scrollTo(0, 100);
-    this.navService.hide();
    }
 
   ngOnInit() {
@@ -20,7 +17,6 @@ export class CheckoutComponent implements OnInit,OnDestroy {
 
 
   ngOnDestroy(){
-    this.navService.show();
   }
 
 }

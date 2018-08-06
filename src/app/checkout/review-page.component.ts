@@ -17,7 +17,6 @@ export class ReviewPageComponent implements OnInit,OnDestroy {
 
   constructor(private cartService:CartService, private requestService:RequestService, private r:Router,private nav:NavbarService) {
     window.scrollTo(0, 100);
-    this.nav.hide();
    }
 
   ngOnInit() {
@@ -38,7 +37,6 @@ export class ReviewPageComponent implements OnInit,OnDestroy {
   }
 
   ngOnDestroy(){
-    this.nav.show();
   }
 
 }

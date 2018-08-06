@@ -1,0 +1,30 @@
+
+
+
+
+#mainnav{
+    height: 85px;
+    padding: 15px 15px 15px 15px;
+}
+
+#mainlogo{
+    font-size: 4rem;
+}
+
+
+.badge{
+    color:white;
+    position: relative;
+    width: 23px;
+    height: 23px;
+    padding: 0;
+    background-color: red;
+    top:-10px;
+    left:-10px;
+    line-height: 0;
+
+}
+
+.material-icons{
+    margin-right: 0px;
+}

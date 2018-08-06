@@ -5,7 +5,6 @@
     <div class="col s12 m7 l8  z-depth-1 listwrapper">
       <app-cart-list *ngFor="let item of cart?.shoppingCart" [cartItem] = item></app-cart-list>
       <h1 *ngIf="cart.shoppingCart.length===0">Your cart is currently empty. </h1>
-      <!-- <button class="btn" (click)="cartService.destroyCart()">Clear Cart</button> -->
     </div>
     <div class="col s12 m4 l3 z-depth-1">
       <div class="orderSummary">

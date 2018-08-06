@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ChangeDetectorRef } from '@angular/core';
 
 @Injectable()
 export class NavbarService {
@@ -8,8 +8,7 @@ export class NavbarService {
     }
     
     hide() { this.visible = false; }
-  
-    show() { this.visible = true; }
+    show() { this.visible = true;}
   
 
     

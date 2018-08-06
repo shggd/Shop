@@ -12,9 +12,15 @@ import * as M from 'materialize-css';
 })
 export class BodyComponent implements OnInit {
   
-  constructor(private productService:ProductService) { }
+  private products:Product[];
+
+  constructor(private productService:ProductService) {window.scroll(0,0); }
 
   ngOnInit() {
+    this.productService.getRandom().subscribe(data=>{
+      this.products=data;
+    },
+    error=>{console.log(error)})
   }
 
 

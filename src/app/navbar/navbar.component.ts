@@ -15,20 +15,14 @@ import * as M from 'materialize-css';
 export class NavbarComponent implements OnInit ,OnDestroy {
 
   item:number;
-  elem:Object
+  elem:Object;
+  dropdown:any;
   constructor(private cartService:CartService, private r:Router) {
-    
-    
+
+       
   }
   ngOnInit() {
-
-    M.AutoInit();
-    this.elem = document.querySelector('.sidenav');
-    var instance = M.Sidenav.init(this.elem, {
-      edge: 'left',
-
-    });
-
+    this.materalizeInit();
     this.cartService.get().subscribe(data=>this.item= data.getTotalItem());
   }
 
@@ -37,9 +31,20 @@ export class NavbarComponent implements OnInit ,OnDestroy {
     instance.close();
     this.r.navigateByUrl(name);
   }
+
+  materalizeInit(){
+    M.AutoInit();
+    this.elem = document.querySelector('.sidenav');
+    var instance = M.Sidenav.init(this.elem, {});
+    document.addEventListener('DOMContentLoaded', ()=> {
+       this.dropdown = document.querySelectorAll('.dropdown-trigger');
+       var instances = M.Dropdown.init(this.dropdown, {coverTrigger:false,constrainWidth:false});
+    });    
+  }
   ngOnDestroy() {
     //Called once, before the instance is destroyed.
     //Add 'implements OnDestroy' to the class.
+    console.log("destoryed");
   }
   
 }

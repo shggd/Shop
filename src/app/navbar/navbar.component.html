@@ -1,29 +1,41 @@
-<nav class="blue ">
-  <div class="nav-wrapper container">
-    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    <a [routerLink]="['/product']" class="brand-logo white-text"><i class="material-icons">shopping_basket</i></a>
-    <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> -->
-    <ul class="right">
-      <!-- <li><a data-target="modal1" class="modal-trigger"><span>Search</span></a></li> -->
-      <li routerLinkActive="active"><a [routerLink]="['/cart']"><span>Cart:</span><span>{{item}}</span></a></li>
-      
-    </ul>
-    <ul class="right hide-on-small-and-down ">
-        <!-- <li><app-search></app-search></li>     -->
-        <li><a data-target="modal1" class="modal-trigger"><span>Search</span></a></li>
-    </ul>
-    <app-search [trigger]="false"></app-search>
-
-    <ul id="slide-out" class="sidenav">
-        <li><a (click)="changeRoute('/')">Home</a></li>
-        <li><a (click)="changeRoute('/product')">Product</a></li>
-        <li><a (click)="changeRoute('/search')">Search</a></li>
-        <li><a (click)="changeRoute('/orderstatus')">Order Status</a></li>
-        <li><a (click)="changeRoute('/cart')">Cart</a></li>  
-    </ul>
-
+<div class="orange">
+    <div class="container center-align white-text">
+            <strong>Free Item</strong>
+    </div>
 </div>
-  
-</nav>
 
+<ul id='dropdown1' class='dropdown-content'>
+        <li><a (click)="changeRoute('/product')" class="black-text">Products</a></li>
+</ul>
+<ul id='dropdown2' class='dropdown-content'>
+        <li><a (click)="changeRoute('/orderstatus')"  class="black-text">Order Status</a></li>
+</ul>
+
+<nav id="mainnav" class="black">
+    <div class="nav-wrapper container">
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <a [routerLink]="['/']" class="brand-logo white-text hide-on-large-only" ><i id="mainlogo" class="material-icons">shopping_basket</i></a>
+        <ul class="left hide-on-med-and-down" >
+            <li><a [routerLink]="['/']"><i id="mainlogo" class="material-icons left">shopping_basket</i>SHOPV2</a></li>
+            <li><a class="dropdown-trigger" data-target="dropdown1">Shop<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-trigger" data-target="dropdown2">Order<i class="material-icons right">arrow_drop_down</i></a></li>
+        </ul>
+        <ul class="right">
+            <li routerLinkActive="active"><a [routerLink]="['/cart']"><i class="material-icons left">shopping_cart</i><button class="btn-floating badge">{{item}}</button></a></li>
+        </ul>
+        <ul class="right hide-on-med-and-down ">
+            <li><a data-target="modal1" class="modal-trigger"><i class="material-icons left">search</i></a></li>
+        </ul>
+        <app-search [trigger]="false"></app-search>
+
+        <ul id="slide-out" class="sidenav">
+            <li class="center"><i class="material-icons black-text">shopping_basket</i></li>
+            <li><a (click)="changeRoute('/')"><i class="material-icons left">home</i>Home</a></li>
+            <li><a (click)="changeRoute('/product')"><i class="material-icons left">pets</i>Product</a></li>
+            <li><a (click)="changeRoute('/search')"><i class="material-icons left">search</i>Search</a></li>
+            <li><a (click)="changeRoute('/orderstatus')"><i class="material-icons left">confirmation_number</i>Order Status</a></li>
+            <li><a (click)="changeRoute('/cart')"><i class="material-icons left">shopping_cart</i>Cart</a></li>  
+        </ul>
+    </div>
+</nav>
       

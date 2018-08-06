@@ -32,7 +32,6 @@ import { FormsModule } from '@angular/forms';
 // import { ProductComponent } from './product/product.component';
 
 
-import * as M from 'materialize-css';
 
 
 const routes: Routes = [
@@ -51,7 +50,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     BodyComponent,
-    NotfoundComponent,
+    // NotfoundComponent,
     // NavbarComponent,
     // FooterComponent,
     // ReviewPageComponent,

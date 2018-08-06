@@ -17,7 +17,8 @@ export class TrackingComponent implements OnInit {
   private result:Boolean = false;
   private ordernum:number;
 
-  constructor(private reqestService:RequestService, private activeRoute:ActivatedRoute, private router:Router) { }
+  constructor(private reqestService:RequestService, private activeRoute:ActivatedRoute, private router:Router) { 
+  }
 
   ngOnInit() {
     this.activeRoute.queryParams.subscribe(param=>{

@@ -9,7 +9,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ComfirmationComponent implements OnInit {
 
   private ordernum:number;
-
   constructor(private requestService:RequestService, private activatedRoute:ActivatedRoute , private router:Router) { }
   
   ngOnInit() {
@@ -20,6 +19,10 @@ export class ComfirmationComponent implements OnInit {
 
   render(id){
     this.ordernum = id; 
+    this.requestService.getOrder(id).subscribe(
+      data=>{},
+      error=>{this.router.navigate(['/404'])}
+    );
   }
   private getStatus(){
     this.router.navigate(['/orderstatus'],{queryParams:{ordernum:this.ordernum}});

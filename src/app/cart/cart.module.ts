@@ -26,7 +26,9 @@ const cartRouting: Routes = [
         RemoveItemComponent,
         CheckoutComponent,
         ReviewPageComponent,
-        ComfirmationComponent
+        ComfirmationComponent,
+        
+        
     ],
     imports:[
         CommonModule,
