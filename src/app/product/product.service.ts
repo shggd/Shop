@@ -7,6 +7,7 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/throw';
 
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class ProductService {
@@ -16,25 +17,25 @@ export class ProductService {
   
 
   getProduct(page:number, sort:string){//get ALL
-    return this.http.get(`http://localhost:3000/product?page=${page}&&sort_by=${sort}`)
+    return this.http.get(`${environment.apiUrl}/product?page=${page}&&sort_by=${sort}`)
       .map(res=>res.json())
       .catch(this.error);
   }
 
   search(keyword:string){
-    return this.http.get(`http://localhost:3000/product/search?keyword=${keyword}`)
+    return this.http.get(`${environment.apiUrl}/product/search?keyword=${keyword}`)
       .map(res=>res.json())
       .catch(this.error);
   }
 
   get(id){//get One
-    return this.http.get(`http://localhost:3000/product/${id}`)
+    return this.http.get(`${environment.apiUrl}/product/${id}`)
       .map(res=>res.json())
       .catch(this.error);
   }
 
   getRandom(){
-    return this.http.get(`http://localhost:3000/product/get/random`)
+    return this.http.get(`${environment.apiUrl}/product/get/random`)
     .map(res=>res.json())
     .catch(this.error);
   }

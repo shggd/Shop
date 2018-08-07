@@ -1,11 +1,11 @@
 import { CartItem } from './../models/cart-item.model';
 import { Cart } from './../models/cart.model';
 import { Injectable } from '@angular/core';
-import { Headers, Http, Response, URLSearchParams } from '@angular/http';
+import { Headers, Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
-
+import { environment } from '../../environments/environment';
 @Injectable()
 export class RequestService {
 
@@ -39,13 +39,13 @@ export class RequestService {
   }
 
   submitCart(cart:Cart){
-    return this.http.post(`http://localhost:3000/cart/order`,{cart:cart},{headers:this.setHeader()})
+    return this.http.post(`${environment.apiUrl}/cart/order`,{cart:cart},{headers:this.setHeader()})
       .map((res:Response)=>res.json())
       .catch(this.error);
   }
 
   getOrder(orderNumber:number){
-    return this.http.get(`http://localhost:3000/cart/order?ordernumber=${orderNumber}`)
+    return this.http.get(`${environment.apiUrl}/cart/order?ordernumber=${orderNumber}`)
       .map((res:Response)=>res.json())
       .catch(err=>Observable.throw(err));
   } 
