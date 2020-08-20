@@ -1,3 +1,7 @@
+
+
+# Demo [Here](https://dry-dusk-81910.herokuapp.com/)
+
 # Shop
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
